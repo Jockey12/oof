@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML form</title>
+    <style>
+    body {
+      padding: 10px;
+      margin: 10px;
+      background: #eee;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      border-bottom: 1px dotted #ccc;
+    }
+
+    #output {
+      color: #f00;
+    }
+    </style>
+    <script>
+    function readValue() {
+      var formName = document.getElementById('name-input').value;
+      var output = document.getElementById('output');
+      var sound = "Could not find that video..";
+      switch(formName.toLowerCase()) {
+        case 'ocean men':
+          sound="ocean man ocean man take me by the hand";
+          break;
+        case 'onur':
+          sound="..";
+          break;
+        case 'simon':
+           sound="hey whats up guys its your boi here simon henao";
+           break;
+        case 'john':
+          sound="no no no no no";
+          break;
+          
+        
+      }
+      output.innerHTML = ' ' + formName.toLowerCase() + '  ' + sound +'';
+    }
+      
+    </script>
+  </head>
+  <body>
+    <h1>Youtube</h1>
+    <div>
+      Find a video to watch!: <input type="text" id="name-input"/>
+      <input type="button" value="click" OnClick="readValue()"/>
+    </div>
+    <br/>
+    <p id="output"></p>
+  </body>
+</html>
+
+
+
+
